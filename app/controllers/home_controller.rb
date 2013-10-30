@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def resource
+    @so = "Hello, this is resource page!"
   end
 
   def ogranisation

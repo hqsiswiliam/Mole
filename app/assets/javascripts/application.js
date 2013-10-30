@@ -12,4 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernizr.custom.15723.js
 //= require_tree .
