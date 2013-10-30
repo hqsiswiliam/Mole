@@ -9,7 +9,14 @@ class HomeController < ApplicationController
   def ogranisation
   end
 
-  def what_is_here
+  def what_is_here 
+    case params[:key]
+    when "birds"
+      render :bird
+    else 
+      render
+    end
+
   end
 
   def event
