@@ -1,13 +1,20 @@
 MoleValleyNaturalHistory::Application.routes.draw do
   devise_for :users
 
+  # match 'home/what_is_here/:key' => 'home#what_sub'
+
   get "home/index"
 
   get "home/resource"
 
   get "home/ogranisation"
 
-  get "home/what_is_here"
+  get "home/what_is_here/"
+
+  #get "home/what_sub/"
+
+  #Optional methods
+  get "home/what_is_here/:key" => "home#what_sub", :as => :home_what_sub
 
   get "home/event"
 
