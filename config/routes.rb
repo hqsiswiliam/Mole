@@ -11,7 +11,7 @@ MoleValleyNaturalHistory::Application.routes.draw do
 
   get "home/what_is_here/"
 
-  #get "home/what_sub/"
+  #get "home/what_sub/:key" => HomeController.action(:what_sub)
 
   #Optional methods
   get "home/what_is_here/:key" => "home#what_sub", :as => :home_what_sub
@@ -20,13 +20,11 @@ MoleValleyNaturalHistory::Application.routes.draw do
 
   get "home/contact_us"
 
-  resources :home
-
   root :to => 'home#index'
   #match '/contact_us', :to => 'home#contact_us'
   #match '/event', :to => 'home#event'
   #match '/ogranisation', :to => 'home#ogranisation'
-  #match '/resource', :to => 'home#resource'
+  # match '/resource', :to => 'home#resource', :via => :put
   #match '/what_is_here', :to => 'home#what_is_here'
 
   # The priority is based upon order of creation:

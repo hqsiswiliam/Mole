@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
+<div id="container">
+<head id="page_header">
   <title>MoleValleyNaturalHistory</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
+
+<body>
+<%=render 'layouts/header'%>
+<!-- <%=render 'layouts/sidebar'%> -->
+<%=render 'layouts/navigation'%>
+<br><br><br><br><br><br><br><br><br><br>
+
+<%= yield %>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<body>
-<%=render 'layouts/navigation'%>
-<%=render 'layouts/sidebar'%>
-<%= yield %>
-
 </body>
+</div>
 </html>
